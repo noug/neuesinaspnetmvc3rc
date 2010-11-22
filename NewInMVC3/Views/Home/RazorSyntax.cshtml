@@ -1,0 +1,67 @@
+﻿@{
+    View.Title = "RazorSyntax";
+    var x = 10;
+    for (var y = 0; y < x; y++)
+    {
+        // Mach was wunderbares
+    }
+}
+
+@section footer {
+    Ich bin die Fußzeile in der Razor-Syntaxdemo
+}
+
+<h2>
+    Razor Syntax Bespiele</h2>
+<h3>
+    Einfache Iteration</h3>
+<ul>
+
+    @for (var i = 0; i < 10; i++)
+    {
+        <li>@i. Nummer @i</li>
+    }
+
+</ul>
+<ul>
+    @{
+        var numbers = Enumerable.Range(1, 10);
+        foreach (var number in numbers)
+        {
+        <li>@number*10 ist gleich @(number * 10)</li>
+    
+        }
+    
+}
+</ul>
+@{var condition = 1; var message = "";}
+
+
+@switch (condition)
+{
+    case 1:
+        message = "42";
+        break;
+    default:
+        message = "0815";
+        break;
+}
+@(message)ist die Antwort 
+
+
+</ul>
+@{
+    for (var j = 0; j < 10; j++)
+    {
+        <text><li>@j. Nummer @j</li></text>
+    }     
+}
+</ul>   
+
+@* Dependency Example
+
+<p>@SimpleService.What();</p>
+
+<p>@SimpleService.WhatElse();</p>
+
+*@

@@ -1,0 +1,13 @@
+﻿@{
+    View.Title = "Grid";
+}
+
+@model IEnumerable<Person>
+
+<h2>Grid</h2>
+@{
+    var grid = new WebGrid(Model, null, "Vorname");
+}
+@grid.GetHtml()
+
+

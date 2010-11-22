@@ -1,0 +1,23 @@
+﻿@{
+    View.Title = "Home Page";
+}
+
+<h2>@View.Message</h2>
+@{var text = "<b>Ding</b>";}
+@Html.HtmlDecode(text)
+
+<text>
+<p>
+    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">
+        http://asp.net/mvc</a>.
+</p>
+</text>
+
+<p>Es ist @Html.Action("Include")</p>
+
+<ul>
+<li>@Html.ActionLink("Razor Beispiel", "RazorSyntax")</li>
+<li>@Html.ActionLink("Validierung Beispiel", "Index","Validation")</li>
+<li>@Html.ActionLink("Mehr", "Index","Fancy")</li>
+
+</ul>
